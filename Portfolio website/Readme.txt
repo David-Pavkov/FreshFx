@@ -1,0 +1,1 @@
+Eine simple webseite für den "Recruiting day" im FAB... mit hilfe von chatgpt und den HTML/CSS einheiten im kurs
