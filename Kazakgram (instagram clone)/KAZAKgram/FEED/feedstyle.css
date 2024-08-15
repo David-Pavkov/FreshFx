@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    margin-top: 50px;
+    background: url('../images/kazak.jpg') no-repeat center center/cover;
+    opacity: 0.5; /* 50% transparency */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background image stays behind the content */
+    background-position: -390px,0;
+    background-color: rgb(72,123,178);
+    
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    border: 1px solid rgb(5, 1, 22);
+    box-shadow: 5px 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main-content";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffdd57;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    
+}
+
+.logout-button{
+    margin-left: 915px;
+    color: #333;
+    text-decoration: none; /* Remove underline */
+    
+}
+
+
+.sidebar {
+    position: fixed;
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    top: 80px;
+}
+
+.icon {
+    font-size: 24px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.icon-link {
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure it's treated as an inline element */
+}
+
+.main-content {
+    grid-area: main-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(193, 231, 247, 0.658);
+}
+
+.card {
+
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    
+}
+.card .lupe{
+    margin-left: 570px;
+}
+
+.card .card-link{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #ffdd57;
+    width: 100%;
+    height: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.author {
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.card-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 15px;
+    cursor: pointer; /* Add cursor pointer for clickable images */
+    position: relative;
+    margin-top: 20px;
+}
+
+.card-body h2 {
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #666;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.upvote {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.votes {
+    font-size: 18px;
+}
+
+/* Overlay styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+.overlay-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+

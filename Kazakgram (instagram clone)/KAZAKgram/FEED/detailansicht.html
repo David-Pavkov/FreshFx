@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAZAKgram Post</title>
+    <link rel="stylesheet" href="detailcss.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">KAZAKgram</div>
+        </header>
+        <aside class="sidebar">
+            <a href="feed.html"class="icon-link">
+                <div class="icon">🏠</div>
+            </a>
+            <a href="https://www.facebook.com/groups/226030092341945/" class="icon-link" target="_blank" rel="noopener noreferrer">
+                <span class="icon">👍</span>
+            </a>
+            <a href="../upload.html"class="icon-link">
+                <div class="icon">📷</div>
+            </a>
+        </aside>
+        <main class="main-content">
+            <div id="feed-container"></div>
+            
+            <div id="comment-container">
+                <h2 class="comment-header">Comments</h2>
+            </div>
+            <div class="comment">
+                <h2 id="comment_header">Comment for Kazakhstan 👍 </h2>
+                <div id="kommentreset">⟳</div>
+                <textarea class="kommentar" id="komment-area"></textarea>
+                <div class="user"></div>
+                <div class="bildID"></div>
+                <button id="submit-comment">TO KAZAKHSTAN 👍 </button>
+            </div>
+        </main>
+    </div>
+    <div id="overlay" class="overlay">
+        <img id="overlayImage" class="overlay-image" src="" alt="Enlarged Image">
+    </div>
+    <script src="detail.js"></script>
+</body>
+</html>
